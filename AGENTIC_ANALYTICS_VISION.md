@@ -193,7 +193,42 @@ The following tools and features are considered in the platform assessment (agen
 
 ---
 
-## 9. Why Over-Reliance on Databricks Is Not Ideal
+## 9. Building a Platform Internally
+
+Building an agentic analytics platform in-house is **technically feasible**—especially for organizations with strong engineering capacity—but **scalability, sustainability, and ongoing innovation** have historically been the undoing of such efforts. Industry evidence and precedent argue that **large non-technology enterprises should not attempt to build these platforms** and should instead **focus on curating and maintaining knowledge** and **consuming** agentic analytics via vendor solutions.
+
+### 9.1 Historical Precedent: Legacy BI
+
+The same pattern held for **legacy business intelligence**. Many enterprises built or heavily customized in-house BI and reporting platforms. Over time, most **struggled to scale**, keep pace with user expectations, and maintain feature parity with commercial offerings. Organizations that **adopted and standardized on vendor platforms** (e.g., Tableau, Power BI) typically achieved **broader adoption, faster time-to-value, and lower total cost of ownership** than those that continued to build and maintain custom BI stacks. The lesson: **buy-and-adopt** for the core platform, **configure-and-curate** for enterprise-specific context.
+
+### 9.2 Why In-House Builds Fail at Scale (Especially in Non-Tech Enterprises)
+
+- **Sustained investment and upgrade cycles** – Non-technology enterprises rarely treat internal analytics platforms as a permanent product line. Funding and headcount fluctuate; roadmaps slip. Vendor products benefit from **continuous R&D and predictable feature rollout** (NLQ, agents, integrations, compliance), which in-house teams cannot match.
+- **Scalability and scope creep** – Agentic analytics requires ontology/knowledge layers, model integration, security, multi-source connectivity, and UX across personas. **Scaling from pilot to enterprise** exposes gaps in governance, performance, and support that vendors have already solved across many customers.
+- **Industry failure rates** – Studies consistently report that **a majority of enterprise BI and analytics initiatives fail** to deliver expected business value (often cited in the **60–80% range**, with some analyses higher). Failures are frequently due to **strategy, ownership, and change management**—not raw technical capability. Building the platform in-house **adds technical and product risk** on top of these same organizational risks.
+- **Build vs. buy framing** – Analysts (e.g., Forrester) emphasize that **extreme “all-in build”** for complex analytics stacks tends to underperform. The recommendation is to **avoid building the platform itself** and instead **focus on flexible adoption, governance, and value realization**—i.e., curating context and consuming capabilities from vendors.
+
+### 9.3 Where Enterprises Should Focus: Curate and Consume, Don’t Build
+
+Large enterprises—especially non-technology ones—should **not** treat agentic analytics as an internal platform build. They should:
+
+| Focus area | Recommendation |
+|------------|-----------------|
+| **Platform** | **Leverage external vendor solutions** (e.g., TextQL or comparable agentic analytics platforms) for the core engine: hypothesis generation, execution, visualization, alerts, BYOM/BYOK. |
+| **Knowledge and context** | **Curate and maintain** enterprise context: data documentation, ontologies, knowledge graphs, leading indicators, and strategy. Feed these into the vendor platform via BYOK or native ontology/context features. |
+| **Consumption and enablement** | **Enable business teams** to generate and consume insights and to **curate domains and business knowledge** with minimal or no code—via UI-based configuration, playbooks, and governed ontologies. |
+
+Platforms such as **TextQL** are designed to support exactly this split: **vendor provides the agentic engine and UX**; **enterprise provides and maintains the knowledge**. Business users can **configure domains, ontologies, and business rules** through the UI, reducing dependence on IT for every change while keeping governance.
+
+### 9.4 Bottom Line
+
+- **Building an agentic analytics platform internally** is doable in theory but carries **severe scalability and sustainability risks**; large non-technology enterprises have a **poor track record** with custom BI and analytics builds.
+- **Industry guidance** discourages all-in internal builds and favors **adopting vendor platforms** while investing in **governance, curation, and adoption**.
+- **Enterprises should focus on curating and maintaining knowledge** and **being effective consumers** of agentic analytics—using vendor solutions that allow **no-code or low-code curation** of business context and domains (e.g., TextQL) rather than building the platform itself.
+
+---
+
+## 10. Why Over-Reliance on Databricks Is Not Ideal
 
 Databricks offers a strong integrated stack (data, compute, Genie, Data Science Agent, Deep Research). However, **concentrating data, knowledge, and agentic analytics entirely on Databricks** creates risks that matter to business and leadership:
 
@@ -210,9 +245,9 @@ Databricks offers a strong integrated stack (data, compute, Genie, Data Science 
 
 ---
 
-## 10. Recommendation: Ideal Architecture
+## 11. Recommendation: Ideal Architecture
 
-### 10.1 Recommended Direction
+### 11.1 Recommended Direction
 
 - **Agentic analytics layer:** Prefer a **platform such as TextQL** (or a comparable alternative that meets the criteria below) as the primary agentic analytics engine, based on:
   - **Data-warehouse agnostic** connectivity (Snowflake, BigQuery, Redshift, Databricks, semantic layers).
@@ -231,7 +266,7 @@ Databricks offers a strong integrated stack (data, compute, Genie, Data Science 
   - Prefer a **platform that can build and consume ontologies** (e.g., TextQL’s Ontology) and/or **accept BYOK** so that technical teams can plug in existing knowledge graphs.  
   - Support **documentation-to-knowledge** flows for non-technical users so that enterprise context is captured once and reused.
 
-### 10.2 Ideal Stack (Summary)
+### 11.2 Ideal Stack (Summary)
 
 | Layer | Recommendation |
 |-------|----------------|
@@ -245,13 +280,14 @@ This architecture supports **insights on demand**, **reduced dashboard noise**, 
 
 ---
 
-## 11. Document Intent & Use
+## 12. Document Intent & Use
 
 This document is intended to:
 
 - **Clarify** the role of agentic analytics (analyst augmentation, not data science replacement) and the problems it solves.
 - **Set executive expectations** for current vs. future state (noise reduction, on-demand insights, democratization).
 - **Compare** leading platforms objectively on requirements and personas, with a **bias toward TextQL or a comparable platform** that is data-agnostic, supports BYOM/BYOK, and avoids single-vendor lock-in.
+- **Discourage in-house platform builds** for agentic analytics (especially in large non-technology enterprises) and **direct focus toward curating knowledge and consuming vendor solutions** (Section 9).
 - **State clearly** that **Databricks in its current form is not ideal as the sole agentic analytics and knowledge platform** for the enterprise, due to lock-in, cost, single point of failure, and persona fit—while still valuing it where it excels (data engineering, compute).
 - **Recommend** an **ideal data platform + compute + knowledge/ontology + agentic analytics** setup that is modular, secure, and future-proof.
 
