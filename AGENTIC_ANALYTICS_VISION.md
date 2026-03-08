@@ -295,4 +295,7 @@ You can adapt this vision for internal strategy, RFP criteria, or architecture r
 
 ---
 
-*Document version: 2.0 — For review and publication as markdown on GitHub.*
+**Disclaimer**  
+This document was authored by **Shashank Navuduri** and created with the assistance of artificial intelligence (AI). The opinions, recommendations, and content reflect the author’s views and have been reviewed and approved by the author. The AI was used as a tool to support drafting, structure, and research; it does not attest to the accuracy of the content, and no AI provider endorses or is responsible for this document.
+
+*Document version: 4.0 — For review and publication as markdown on GitHub.*
