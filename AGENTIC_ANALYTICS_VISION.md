@@ -168,11 +168,9 @@ The following tools and features are considered in the platform assessment (agen
 
 ## 8. Platform Assessment
 
-The following tables assess all tools in scope (Section 7). **Tableau**, **Power BI**, **Databricks**, and **TextQL** are highlighted below as primary platforms for comparison.
-
 ### 8.1 Requirements Alignment (BYOK, BYOM, Data Agnostic, etc.)
 
-| Requirement | **Tableau (Next AI)** | **Power BI + Copilot** | **Databricks (Genie / DSA / Deep Research)** | **TextQL (Ana)** | WisdomAI | ThoughtSpot | Tellius | IBM watsonx BI | Push.ai | AgenticBI |
+| Requirement | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA / Deep Research)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⚪ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
 |-------------|------------------------|-------------------------|-----------------------------------------------|------------------|----------|-------------|---------|----------------|---------|-----------|
 | **Context (docs, KG, leading indicators)** | Semantic model / metadata; limited KG | Semantic model; Copilot context | Genie spaces, Unity Catalog; strong if all on DBX | Ontology; multi-source; docs/semantic layers | Enterprise context layer; semantic/DBT/catalogs | SpotterModel; semantic modeling; AI agents | Metrics, documents, conversations | NL + reasoning; semantic layer | Quantitative + qualitative (transcripts, docs); cited answers | Multi-source; NL; early access |
 | **Hypothesis + execution (beyond code gen)** | Limited to semantic model & NLQ | Copilot over semantic model | DSA/Genie Agent; strong when data in DBX | Ana: multi-step analysis, code exec, ontology | Proactive monitoring; NL analytics; cross-source | AI agents; live, explainable insights | Automated root cause; agentic workflows | Step-by-step reasoning; predictive | Governed attributes; cross-source answers | Summarization; anomalies; recommendations |
@@ -184,18 +182,14 @@ The following tables assess all tools in scope (Section 7). **Tableau**, **Power
 | **BYOK (bring your own knowledge graph)** | Limited | Limited | Genie spaces; DBX-centric | Ontology; can ingest/align to external KG | Context layer; semantic/DBT; structured context | Semantic layer (SpotterModel) | Limited / semantic layer | Semantic layer | Context as governed attributes | Limited (early access) |
 | **On-prem / self-host** | Limited / specific offerings | Limited | VPC / managed; full on-prem complex | **On-prem & self-hosted available** | Enterprise; HIPAA; deployment options | Cloud; on-prem options (verify) | Verify per deployment | IBM on-prem / hybrid options | Verify per deployment | Early access |
 
-*Summary:* Among the **highlighted platforms**, **TextQL**, **Tableau**, and **Power BI** (with semantic layers) align well with data agnosticism and broad persona coverage; **Databricks** is powerful when the entire pipeline is on the platform but weak on agnosticism and creates vendor lock-in. WisdomAI, ThoughtSpot, Tellius, IBM watsonx BI, Push.ai, and AgenticBI offer complementary agentic or NL-driven analytics; fit depends on BYOM/BYOK, deployment, and data-source requirements.
-
 ### 8.2 Persona Alignment
 
-| Persona | **Tableau (Next AI)** | **Power BI + Copilot** | **Databricks (Genie / DSA)** | **TextQL (Ana)** | WisdomAI | ThoughtSpot | Tellius | IBM watsonx BI | Push.ai | AgenticBI |
+| Persona | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⚪ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
 |---------|------------------------|-------------------------|------------------------------|------------------|----------|-------------|---------|----------------|---------|-----------|
 | **Business / data analyst** | Good for governed self-serve on existing semantic model | Good with Copilot over semantic model | Strong for technical analysts on DBX | Strong: threads, code visibility, ontology, multi-step | Strong: NL, dashboards, export | Strong: Analyst Studio; semantic modeling | Strong: NL; root cause; agentic workflows | Good: NL; reasoning; predictive | Good: cited answers; cross-source | Good: NL; multi-source (early access) |
 | **Non-technical business user** | Good if trained on semantic model | Good with Copilot | Steep learning curve; Genie helps but DBX-centric | Strong: NL, Slack, embed; no SQL | Strong: NL, proactive alerts | Strong: NL; live insights in workflows | Good: NL; ChatGPT-like interface | Good: NL; step-by-step reasoning | Good: Slack/Teams; narrative answers | Good: conversational (early access) |
 | **Technical user / BYOK** | Limited | Limited | Good within DBX (spaces, catalog) | Strong: ontology; BYOK; code and refinement | Good: context layer; DBT/catalogs | Good: SpotterModel; semantic layer | Verify | Semantic layer; IBM stack | Governed attributes; context | Limited (early access) |
 | **Leadership (self-serve, real-time)** | Dashboards + subscriptions | Dashboards + Copilot | Genie possible; often requires analyst mediation | Strong: Playbooks, Slack, embed; concise narratives | Strong: proactive monitoring; PPT/Slides export | Good: live insights in workflows | Good: automated insights → actions | Good: intelligent alerts; personalized metrics | Good: Slack/Teams; cited narratives | Verify (early access) |
-
-*Summary:* Among the **highlighted platforms**, **TextQL**, **Tableau**, and **Power BI** align well across business, non-technical, and leadership personas; **Databricks** is strongest for technical analysts already on the platform. ThoughtSpot, Tellius, IBM watsonx BI, Push.ai, and AgenticBI extend coverage for NL-driven and agentic use cases; evaluate per persona and deployment needs.
 
 ---
 
