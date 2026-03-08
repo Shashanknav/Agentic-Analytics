@@ -16,7 +16,8 @@ This document clarifies the **role** of agentic analytics (what it is and is not
 |-----------|------------------------|-----------------------------|
 | **Insight access** | Gated by technical teams and BI queues | Self-serve, on-demand for business and leadership |
 | **Signal vs. noise** | Dashboards and reports create volume; actionability is low | Focus on leading indicators, anomalies, and narrative recommendations |
-| **Cost & risk** | Heavy reliance on one platform (e.g., Databricks) → lock-in, migration cost | Data-warehouse agnostic; modular; lower migration cost |
+| **Data sprawl** | Data silos make it impossible for end-to-end insights | Agentic analytics will enable cross–data-warehouse insights |
+| **Costs & risk** | Enterprises investing in large cloud data migration efforts to unlock value, leading to high migration costs and lock-ins | Agentic Analytics eliminates the need for data centralization |
 | **Compliance** | Often cloud-only, shared tenancy | On-prem / self-host options; HIPAA-friendly; BYOM/BYOK |
 | **Democratization** | Knowledge silos; SMEs as bottlenecks | Documentation → knowledge graphs; insights available across personas |
 
@@ -60,11 +61,13 @@ flowchart LR
     A --> B --> C --> D --> E --> F --> G --> H
 ```
 
+**Key assumptions:** The platform is already provided data locations, enterprise context, data documentation, ontologies / knowledge graphs, leading indicators, and enterprise strategy.
+
 **What each stage implies for a platform:**
 
 | Stage | Platform expectation |
 |-------|----------------------|
-| **Business Problem / EDA** | Uses context: data documentation, ontologies/knowledge graphs, leading indicators, and enterprise strategy. |
+| **Business Problem / EDA** | Where any technical and/or non-technical user across varying degree of enterprise experience should be able to initiate data research for decision making. This is user input and not something the platform is expected to solve. |
 | **Hypothesis Generation** | Proposes testable hypotheses from the question and context—not just one-off queries. |
 | **Analytics Planning** | Plans multi-step analysis (which datasets, metrics, segments, time windows). |
 | **Code (ETL/Analysis)** | Generates and runs SQL and/or analytical code in a governed, auditable way. |
@@ -105,16 +108,16 @@ For an ideal setup, the following components are required.
 
 | # | Component | Description |
 |---|-----------|-------------|
-| 1 | **Context** | Data documentation; enterprise business context; leading indicators; strategies aligned to the enterprise (implementable). |
+| 1 | **Context** | Enterprise connects into existing knowledge centers (Confluence, SharePoint, GitHub, Atlassian, Collibra, knowledge graphs, ontologies) or creates new knowledge that was previously missing. Platform is expected to generate new ontologies or leverage BYOK (Bring your own knowledge graphs). |
 | 2 | **Strong analytics layer** | Hypothesis generation + execution with minimal human/technical input; goes beyond notebook code generation. |
-| 3 | **Intelligent alerts & distribution** | Ability to push insights via multiple channels (chat, email, PPT, etc.). |
+| 3 | **Intelligent alerts & distribution** | Ability to push insights via multiple channels (chat, email, PPT, etc.). Ability for the platform to suppress stale or non-actionable insights. Reduce cognitive load by improving signal-to-noise ratio. |
 | 4 | **Whitelabeling** | Support for data sales, client reporting, and upselling (e.g., branded reports, client-facing portals). |
 | 5 | **Bring your own model (BYOM)** | Use of enterprise-approved, hosted LLMs (on-prem or approved cloud). |
 | 6 | **Reduce dashboard clutter** | Shift from “more dashboards” to curated signals and narrative insights. |
 
 Additional architectural expectations:
 
-- **Data-warehouse agnostic**: Works across Snowflake, BigQuery, Redshift, Databricks, and others to handle data sprawl today.
+- **Data-warehouse agnostic**: Works across Snowflake, BigQuery, Redshift, Databricks, and others, as well as on-prem legacy data stores (e.g., Oracle, SQL data warehouses), to handle data sprawl today.
 - **Bring your own knowledge graph (BYOK)**: Technical users can plug in existing ontologies/knowledge graphs; non-technical users can benefit from docs-to-knowledge-graph flows.
 - **On-prem / self-host option**: For security, data residency, and HIPAA compliance.
 
@@ -137,22 +140,29 @@ Additional architectural expectations:
 
 1. **Democratize insights** – Reduce reliance on technical teams for routine analysis; enable business users and leadership to get answers.
 2. **Break knowledge silos** – Surface SME knowledge via documentation and knowledge graphs so it is reusable across the organization.
-3. **Reduce single-platform dependency** – Avoid “everything on Databricks” (or any one vendor) to lower lock-in, migration cost, and single point of failure.
+3. **Reduce single-platform dependency** – Avoid concentrating data, knowledge, and analytics on one vendor to lower lock-in, migration cost, and single point of failure.
 4. **Keep migration options open** – Modular design so that future data platform or compute changes are lower cost.
 5. **Security and compliance** – On-prem / self-host options to reduce data loss risk and support HIPAA and similar regimes.
 6. **Handle data sprawl** – Generate value across warehouses and sources today, without waiting for a multi-year data migration.
+7. **Reduce reliance on traditional BI** – Shift from dashboard-centric consumption to narrative, on-demand insights and reduce dashboard sprawl.
+8. **Unlock new value** – Enable cross–data-warehouse and cross-source analytics without requiring full data centralization first.
 
 ---
 
 ## 7. Tools in Scope
 
-The following tools and features are considered in the platform assessment:
+The following tools and features are considered in the platform assessment (agentic or agentic-adjacent analytics platforms in the industry):
 
 - **Tableau** – Next-generation AI features (NLQ, explainers, etc.)
 - **Power BI** – Copilot and embedded analytics
 - **Databricks** – Agentic solutions (Genie, Data Science Agent, Deep Research)
-- **TextQL** – Ana (AI data analyst), ontology, multi-source, Slack/API/embed)
+- **TextQL** – Ana (AI data analyst), ontology, multi-source, Slack/API/embed
 - **WisdomAI** – Conversational analytics, dynamic dashboards, proactive monitoring, enterprise context layer
+- **ThoughtSpot** – Agentic analytics platform; AI agents, Analyst Studio, semantic modeling (SpotterModel)
+- **Tellius** – Agentic analytics for enterprise data; NL interface, automated root cause analysis, agentic workflows
+- **IBM watsonx BI** – AI-powered analyst; natural language query, step-by-step reasoning, intelligent alerts, predictive capabilities
+- **Push.ai** – Agentic analytics combining quantitative metrics with qualitative context (transcripts, documents); cited answers, Slack/Teams
+- **AgenticBI** – Conversational analytics (early access); multiple data sources, AI agents for summarization, anomalies, recommendations
 
 ---
 
@@ -253,4 +263,4 @@ You can adapt this vision for internal strategy, RFP criteria, or architecture r
 
 ---
 
-*Document version: 1.0 — For review and publication as markdown on GitHub.*
+*Document version: 2.0 — For review and publication as markdown on GitHub.*
