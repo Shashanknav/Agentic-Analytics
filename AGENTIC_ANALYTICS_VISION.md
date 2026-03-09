@@ -170,7 +170,7 @@ The following tools and features are considered in the platform assessment (agen
 
 ### 8.1 Requirements Alignment (BYOK, BYOM, Data Agnostic, etc.)
 
-| Requirement | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA / Deep Research)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⚪ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
+| Requirement | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA / Deep Research)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⭐ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
 |-------------|------------------------|-------------------------|-----------------------------------------------|------------------|----------|-------------|---------|----------------|---------|-----------|
 | **Context (docs, KG, leading indicators)** | Semantic model / metadata; limited KG | Semantic model; Copilot context | Genie spaces, Unity Catalog; strong if all on DBX | Ontology; multi-source; docs/semantic layers | Enterprise context layer; semantic/DBT/catalogs | SpotterModel; semantic modeling; AI agents | Metrics, documents, conversations | NL + reasoning; semantic layer | Quantitative + qualitative (transcripts, docs); cited answers | Multi-source; NL; early access |
 | **Hypothesis + execution (beyond code gen)** | Limited to semantic model & NLQ | Copilot over semantic model | DSA/Genie Agent; strong when data in DBX | Ana: multi-step analysis, code exec, ontology | Proactive monitoring; NL analytics; cross-source | AI agents; live, explainable insights | Automated root cause; agentic workflows | Step-by-step reasoning; predictive | Governed attributes; cross-source answers | Summarization; anomalies; recommendations |
@@ -184,7 +184,7 @@ The following tools and features are considered in the platform assessment (agen
 
 ### 8.2 Persona Alignment
 
-| Persona | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⚪ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
+| Persona | **Tableau (Next AI)** 🟠 | **Power BI + Copilot** 🟠 | **Databricks (Genie / DSA)** 🟠 | **TextQL (Ana)** ⭐ | WisdomAI ⭐ | ThoughtSpot ⚪ | Tellius ⚪ | IBM watsonx BI ⚪ | Push.ai ⚪ | AgenticBI ⚪ |
 |---------|------------------------|-------------------------|------------------------------|------------------|----------|-------------|---------|----------------|---------|-----------|
 | **Business / data analyst** | Good for governed self-serve on existing semantic model | Good with Copilot over semantic model | Strong for technical analysts on DBX | Strong: threads, code visibility, ontology, multi-step | Strong: NL, dashboards, export | Strong: Analyst Studio; semantic modeling | Strong: NL; root cause; agentic workflows | Good: NL; reasoning; predictive | Good: cited answers; cross-source | Good: NL; multi-source (early access) |
 | **Non-technical business user** | Good if trained on semantic model | Good with Copilot | Steep learning curve; Genie helps but DBX-centric | Strong: NL, Slack, embed; no SQL | Strong: NL, proactive alerts | Strong: NL; live insights in workflows | Good: NL; ChatGPT-like interface | Good: NL; step-by-step reasoning | Good: Slack/Teams; narrative answers | Good: conversational (early access) |
